@@ -23,9 +23,10 @@ $month = [
 	11 => 30,
 	12 => 31,
 ];
-var_dump($month);
 /* получение исходных параметров */
-$input = fopen($data,"rt") or die("Ошибка открытия файла");
+$input = file($data);
+/* var_dump($input[1]); */
+echo $input[1];
 ?>
 </body>
 </html>
