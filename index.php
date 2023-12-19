@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Тестовое задание Яндекс</title>
+	<title>Тестовое задание</title>
 </head>
 <body>
 
@@ -10,6 +10,7 @@
 
 /* определение переменных */
 $data = "input.txt";
+$output = "output.txt";
 /* массив месяцев года по количеству дней */
 $month = [
 	1 => 31,
@@ -46,7 +47,9 @@ $secondsDiff = getSeconds($input[1]) - getSeconds($input[0]);
 $days = intdiv($secondsDiff, 86400);
 $remainder = $secondsDiff % 86400;
 
-echo $days . " " . $remainder;
+$results =  $days . " " . $remainder;
+file_put_contents($output, $results);
+echo $results;
 
 ?>
 
